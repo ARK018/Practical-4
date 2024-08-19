@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practical 4</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Multiply & Divide two numbers</h1>
+    <form action="" class="form">
+      <div class="form-section">
+        <label for="first_num">First number</label>
+        <input id="num1" type="number" placeholder="Enter First number" />
+      </div>
+
+      <div class="form-section">
+        <label for="second_num">Second number</label>
+        <input id="num2" type="number" placeholder="Enter Second number" />
+      </div>
+
+      <div class="buttons">
+        <button style="padding: 6px" onclick="multiply()">Multiply</button>
+        <button style="padding: 6px" onclick="divide()">Divide</button>
+      </div>
+      <p id="result"></p>
+    </form>
+
+    <script>
+      function multiply() {
+        event.preventDefault();
+        let num_1 = document.getElementById("num1").value;
+        console.log(num_1);
+
+        let num_2 = document.getElementById("num2").value;
+        console.log(num_2);
+
+        let result = Math.round(num_1 * num_2);
+        console.log(result);
+
+        document.getElementById(
+          "result"
+        ).innerHTML = `Result : ${num_1} * ${num_2} = ${result}`;
+      }
+
+      function divide() {
+        event.preventDefault();
+        let num_1 = document.getElementById("num1").value;
+        console.log(num_1);
+
+        let num_2 = document.getElementById("num2").value;
+        console.log(num_2);
+
+        let result = Math.round(num_1 / num_2);
+        console.log(result);
+
+        document.getElementById(
+          "result"
+        ).innerHTML = `Result : ${num_1} / ${num_2} = ${result}`;
+      }
+    </script>
+  </body>
+</html>
